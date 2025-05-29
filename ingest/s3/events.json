@@ -1,0 +1,21 @@
+{
+    "LambdaFunctionConfigurations": [
+        {
+            "Id": "f6fba20a-2e7f-4798-9cce-15675689a0ea",
+            "LambdaFunctionArn": "arn:aws:lambda:us-east-1:307291231597:function:lambda-project3",
+            "Events": [
+                "s3:ObjectCreated:*"
+            ],
+            "Filter": {
+                "Key": {
+                    "FilterRules": [
+                        {
+                            "Name": "Prefix",
+                            "Value": "raw/"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "TransitionDefaultMinimumObjectSize": "all_storage_classes_128K",
+    "Rules": [
+        {
+            "Expiration": {
+                "Days": 1
+            },
+            "ID": "DeleteRawObjects",
+            "Filter": {
+                "Prefix": "raw/"
+            },
+            "Status": "Enabled"
+        },
+        {
+            "Expiration": {
+                "Days": 1
+            },
+            "ID": "DeleteTrustedObjects",
+            "Filter": {
+                "Prefix": "trusted/"
+            },
+            "Status": "Enabled"
+        },
+        {
+            "Expiration": {
+                "Days": 1
+            },
+            "ID": "DeleteRefinedObjects",
+            "Filter": {
+                "Prefix": "refined/"
+            },
+            "Status": "Enabled"
+        }
+    ]
+}

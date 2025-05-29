@@ -1,0 +1,34 @@
+{
+    "Table": {
+        "AttributeDefinitions": [
+            {
+                "AttributeName": "LockId",
+                "AttributeType": "S"
+            }
+        ],
+        "TableName": "EmrClusterLock",
+        "KeySchema": [
+            {
+                "AttributeName": "LockId",
+                "KeyType": "HASH"
+            }
+        ],
+        "TableStatus": "ACTIVE",
+        "CreationDateTime": "2025-05-27T19:53:00.880000+00:00",
+        "ProvisionedThroughput": {
+            "NumberOfDecreasesToday": 0,
+            "ReadCapacityUnits": 5,
+            "WriteCapacityUnits": 5
+        },
+        "TableSizeBytes": 0,
+        "ItemCount": 0,
+        "TableArn": "arn:aws:dynamodb:us-east-1:307291231597:table/EmrClusterLock",
+        "TableId": "3d5d46c3-347b-4cd0-b537-8cc20ead7780",
+        "DeletionProtectionEnabled": false,
+        "WarmThroughput": {
+            "ReadUnitsPerSecond": 5,
+            "WriteUnitsPerSecond": 5,
+            "Status": "ACTIVE"
+        }
+    }
+}
