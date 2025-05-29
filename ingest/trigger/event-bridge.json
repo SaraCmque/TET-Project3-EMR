@@ -1,0 +1,8 @@
+{
+    "Name": "test-rule",
+    "Arn": "arn:aws:events:us-east-1:307291231597:rule/test-rule",
+    "ScheduleExpression": "cron(48 18 * * ? *)",
+    "State": "ENABLED",
+    "EventBusName": "default",
+    "CreatedBy": "307291231597"
+}
