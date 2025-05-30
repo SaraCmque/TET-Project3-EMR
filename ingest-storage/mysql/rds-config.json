@@ -1,0 +1,130 @@
+{
+    "DBInstanceIdentifier": "climate-db",
+    "DBInstanceClass": "db.t4g.micro",
+    "Engine": "mysql",
+    "DBInstanceStatus": "available",
+    "MasterUsername": "admin",
+    "Endpoint": {
+        "Address": "climate-db.c2hyrnbdeokg.us-east-1.rds.amazonaws.com",
+        "Port": 3306,
+        "HostedZoneId": "Z2R2ITUGPM61AM"
+    },
+    "AllocatedStorage": 20,
+    "InstanceCreateTime": "2025-05-25T23:03:35.082000+00:00",
+    "PreferredBackupWindow": "09:04-09:34",
+    "BackupRetentionPeriod": 1,
+    "DBSecurityGroups": [],
+    "VpcSecurityGroups": [
+        {
+            "VpcSecurityGroupId": "sg-03a436cad8ac21f49",
+            "Status": "active"
+        }
+    ],
+    "DBParameterGroups": [
+        {
+            "DBParameterGroupName": "default.mysql8.0",
+            "ParameterApplyStatus": "in-sync"
+        }
+    ],
+    "AvailabilityZone": "us-east-1f",
+    "DBSubnetGroup": {
+        "DBSubnetGroupName": "default-vpc-0c9fbdefcd160bf7c",
+        "DBSubnetGroupDescription": "Created from the RDS Management Console",
+        "VpcId": "vpc-0c9fbdefcd160bf7c",
+        "SubnetGroupStatus": "Complete",
+        "Subnets": [
+            {
+                "SubnetIdentifier": "subnet-08c849e0b50bbde22",
+                "SubnetAvailabilityZone": {
+                    "Name": "us-east-1c"
+                },
+                "SubnetOutpost": {},
+                "SubnetStatus": "Active"
+            },
+            {
+                "SubnetIdentifier": "subnet-0d133432d42f09978",
+                "SubnetAvailabilityZone": {
+                    "Name": "us-east-1a"
+                },
+                "SubnetOutpost": {},
+                "SubnetStatus": "Active"
+            },
+            {
+                "SubnetIdentifier": "subnet-0b7e480370c19fe9d",
+                "SubnetAvailabilityZone": {
+                    "Name": "us-east-1f"
+                },
+                "SubnetOutpost": {},
+                "SubnetStatus": "Active"
+            },
+            {
+                "SubnetIdentifier": "subnet-0f307e4c66207c39a",
+                "SubnetAvailabilityZone": {
+                    "Name": "us-east-1d"
+                },
+                "SubnetOutpost": {},
+                "SubnetStatus": "Active"
+            },
+            {
+                "SubnetIdentifier": "subnet-09df80a9a313235aa",
+                "SubnetAvailabilityZone": {
+                    "Name": "us-east-1e"
+                },
+                "SubnetOutpost": {},
+                "SubnetStatus": "Active"
+            },
+            {
+                "SubnetIdentifier": "subnet-0dc4577897951478b",
+                "SubnetAvailabilityZone": {
+                    "Name": "us-east-1b"
+                },
+                "SubnetOutpost": {},
+                "SubnetStatus": "Active"
+            }
+        ]
+    },
+    "PreferredMaintenanceWindow": "wed:10:25-wed:10:55",
+    "PendingModifiedValues": {},
+    "LatestRestorableTime": "2025-05-30T03:25:00+00:00",
+    "MultiAZ": false,
+    "EngineVersion": "8.0.41",
+    "AutoMinorVersionUpgrade": true,
+    "ReadReplicaDBInstanceIdentifiers": [],
+    "LicenseModel": "general-public-license",
+    "OptionGroupMemberships": [
+        {
+            "OptionGroupName": "default:mysql-8-0",
+            "Status": "in-sync"
+        }
+    ],
+    "PubliclyAccessible": true,
+    "StorageType": "gp2",
+    "DbInstancePort": 0,
+    "StorageEncrypted": true,
+    "KmsKeyId": "arn:aws:kms:us-east-1:307291231597:key/d5825a27-18e2-499e-b323-352205263ca7",
+    "DbiResourceId": "db-BF446ULR7WIPFI75FM34FLWB3M",
+    "CACertificateIdentifier": "rds-ca-rsa2048-g1",
+    "DomainMemberships": [],
+    "CopyTagsToSnapshot": true,
+    "MonitoringInterval": 0,
+    "DBInstanceArn": "arn:aws:rds:us-east-1:307291231597:db:climate-db",
+    "IAMDatabaseAuthenticationEnabled": false,
+    "DatabaseInsightsMode": "standard",
+    "PerformanceInsightsEnabled": false,
+    "DeletionProtection": false,
+    "AssociatedRoles": [],
+    "MaxAllocatedStorage": 1000,
+    "TagList": [],
+    "CustomerOwnedIpEnabled": false,
+    "ActivityStreamStatus": "stopped",
+    "BackupTarget": "region",
+    "NetworkType": "IPV4",
+    "StorageThroughput": 0,
+    "CertificateDetails": {
+        "CAIdentifier": "rds-ca-rsa2048-g1",
+        "ValidTill": "2026-05-25T23:02:40+00:00"
+    },
+    "DedicatedLogVolume": false,
+    "IsStorageConfigUpgradeAvailable": false,
+    "EngineLifecycleSupport": "open-source-rds-extended-support-disabled"
+}
