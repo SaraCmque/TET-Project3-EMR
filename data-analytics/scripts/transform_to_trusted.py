@@ -15,14 +15,13 @@ def main():
  
         logger.info("===> Leyendo datos climáticos desde S3")
         weather_df = spark.read.option("multiline", "true").json("s3://eafit-project-3-bucket/raw/api/*.json")
-        
+
         logger.info(f"===> Datos climáticos leídos. Filas: {weather_df.count()}")
  
         logger.info("===> Leyendo datos de tráfico desde S3")
         traffic_df = spark.read.option("header", "true").csv("s3://eafit-project-3-bucket/raw/mysql/*.csv")
         logger.info(f"===> Datos de tráfico leídos. Filas: {traffic_df.count()}")
-
-
+        
         logger.info("===> Procesando datos climáticos")
         exploded = weather_df.select(
             explode(arrays_zip(
@@ -44,18 +43,19 @@ def main():
  
         logger.info("===> Transformando y uniendo datos de tráfico")
         traffic_df = traffic_df.withColumn("date", col("incident_date").cast("date"))
-
+ 
         final_df = traffic_df.join(weather_processed, "date", "inner") \
-            .withColumn("congestion_level_num", 
+            .withColumn("congestion_level_num",
                         when(col("congestion_level") == "Bajo", 1)
                         .when(col("congestion_level") == "Medio", 2)
                         .otherwise(3))
         logger.info(f"===> Datos finales unidos. Filas: {final_df.count()}")
-
+ 
         final_df = final_df.drop("congestion_level", "incident_date")
-
+ 
         final_df.printSchema()
  
+        final_df = final_df.withColumn("reported_incidents", col("reported_incidents").cast("int"))
         logger.info("===> Escribiendo datos finales a S3")
         final_df.write \
             .mode("overwrite") \
@@ -72,3 +72,4 @@ def main():
  
 if __name__ == "__main__":
     main()
+ 
