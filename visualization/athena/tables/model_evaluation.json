@@ -1,0 +1,68 @@
+{
+    "Name": "model_evaluation",
+    "DatabaseName": "proyecto3_db",
+    "Owner": "hadoop",
+    "CreateTime": "2025-05-31T00:11:42.000Z",
+    "UpdateTime": "2025-05-31T00:11:42.000Z",
+    "LastAccessTime": "1970-01-01T00:00:00.000Z",
+    "Retention": 0,
+    "StorageDescriptor": {
+      "Columns": [
+        {
+          "Name": "model",
+          "Type": "string"
+        },
+        {
+          "Name": "rmse",
+          "Type": "double"
+        },
+        {
+          "Name": "mae",
+          "Type": "double"
+        },
+        {
+          "Name": "best_model",
+          "Type": "string"
+        },
+        {
+          "Name": "evaluation_timestamp",
+          "Type": "timestamp"
+        }
+      ],
+      "Location": "s3://eafit-project-3-bucket/models/results/model_evaluation",
+      "InputFormat": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
+      "OutputFormat": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
+      "Compressed": false,
+      "NumberOfBuckets": -1,
+      "SerdeInfo": {
+        "SerializationLibrary": "org.apache.hadoop.hive.ql.io.parquet.serde.ParquetHiveSerDe",
+        "Parameters": {
+          "serialization.format": "1"
+        }
+      },
+      "BucketColumns": [],
+      "SortColumns": [],
+      "Parameters": {},
+      "SkewedInfo": {
+        "SkewedColumnNames": [],
+        "SkewedColumnValues": [],
+        "SkewedColumnValueLocationMaps": {}
+      },
+      "StoredAsSubDirectories": false
+    },
+    "PartitionKeys": [],
+    "TableType": "EXTERNAL_TABLE",
+    "Parameters": {
+      "transient_lastDdlTime": "1748650302",
+      "EXTERNAL": "TRUE",
+      "parquet. compression": "SNAPPY"
+    },
+    "CreatedBy": "arn:aws:sts::307291231597:assumed-role/voclabs/user3466996=RESTREPO_OSORIO_KRISTIAN",
+    "IsRegisteredWithLakeFormation": false,
+    "CatalogId": "307291231597",
+    "IsRowFilteringEnabled": false,
+    "VersionId": "0",
+    "CatalogIdentifier": "307291231597",
+    "DatabaseId": "a3ce45c584e14dab9db8d2b284c3e0c4",
+    "IsMultiDialectView": false
+}
