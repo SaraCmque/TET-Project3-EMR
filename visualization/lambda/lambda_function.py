@@ -14,7 +14,11 @@ def lambda_handler(event, context):
         '/congestion-stats': "SELECT * FROM proyecto3_db.estadisticas_congestion",
         '/global-stats': "SELECT * FROM proyecto3_db.estadisticas_globales",
         '/correlations': "SELECT * FROM proyecto3_db.correlaciones",
-        '/visualizations': "SELECT * FROM proyecto3_db.visualizaciones"
+        '/visualizations': "SELECT * FROM proyecto3_db.visualizaciones",
+        '/test-data': "SELECT * FROM proyecto3_db.test_data",
+        '/model-evaluation': "SELECT * FROM proyecto3_db.model_evaluation",
+        '/predictions-gbt': "SELECT * FROM proyecto3_db.predictions_gbt",
+        '/predictions-rf': "SELECT * FROM proyecto3_db.predictions_rf"
     }
     
     if path not in queries:
