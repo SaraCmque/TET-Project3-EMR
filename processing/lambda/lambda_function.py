@@ -71,7 +71,7 @@ def create_emr_with_steps():
                     ]
                 }
             },
-             {
+            {
                 'Name': 'DataAnalysis',
                 'ActionOnFailure': 'TERMINATE_CLUSTER',
                 'HadoopJarStep': {
@@ -80,6 +80,18 @@ def create_emr_with_steps():
                         'spark-submit',
                         '--deploy-mode', 'cluster',
                         's3://eafit-project-3-bucket/scripts/analysis.py'
+                    ]
+                }
+            },
+            {
+                'Name': 'RegressionModels',
+                'ActionOnFailure': 'TERMINATE_CLUSTER',
+                'HadoopJarStep': {
+                    'Jar': 'command-runner.jar',
+                    'Args': [
+                        'spark-submit',
+                        '--deploy-mode', 'cluster',
+                        's3://eafit-project-3-bucket/scripts/model.py'
                     ]
                 }
             }
