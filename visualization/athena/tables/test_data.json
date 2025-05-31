@@ -33,7 +33,7 @@
           "Type": "int"
         }
       ],
-      "Location": "s3://eafit-project-3-bucket/models/test_data",
+      "Location": "s3://eafit-project-3-bucket/refined/models/test_data",
       "InputFormat": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
       "OutputFormat": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
       "Compressed": false,

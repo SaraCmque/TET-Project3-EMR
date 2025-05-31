@@ -25,7 +25,7 @@
           "Type": "int"
         }
       ],
-      "Location": "s3://eafit-project-3-bucket/models/results/predictions_gbt",
+      "Location": "s3://eafit-project-3-bucket/refined/models/results/predictions_gbt",
       "InputFormat": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
       "OutputFormat": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
       "Compressed": false,

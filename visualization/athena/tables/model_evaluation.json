@@ -29,7 +29,7 @@
           "Type": "timestamp"
         }
       ],
-      "Location": "s3://eafit-project-3-bucket/models/results/model_evaluation",
+      "Location": "s3://eafit-project-3-bucket/refined/models/results/model_evaluation",
       "InputFormat": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetInputFormat",
       "OutputFormat": "org.apache.hadoop.hive.ql.io.parquet.MapredParquetOutputFormat",
       "Compressed": false,

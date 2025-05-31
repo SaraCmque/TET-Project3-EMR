@@ -95,7 +95,7 @@ report_data = [
 report_df = spark.createDataFrame(report_data)
 
 report_df.write.mode("overwrite") \
-         .parquet("s3a://eafit-project-3-bucket/models/results/model_evaluation/")
+         .parquet("s3a://eafit-project-3-bucket/refined/models/results/model_evaluation/")
 
 # Generate sintetic test data
 start_date = datetime(2025, 3, 1)
@@ -113,10 +113,10 @@ test_pd_df = pd.DataFrame(data)
     
 # Store synthetic test data in S3
 test_df = spark.createDataFrame(test_pd_df)
-test_df.write.parquet("s3a://eafit-project-3-bucket/models/test_data/", mode="overwrite")
+test_df.write.parquet("s3a://eafit-project-3-bucket/refined/models/test_data/", mode="overwrite")
 
 # Load synthetic test data
-predictions_df = spark.read.parquet("s3a://eafit-project-3-bucket/models/test_data/*.parquet")
+predictions_df = spark.read.parquet("s3a://eafit-project-3-bucket/refined/models/test_data/*.parquet")
 
 # Transform synthetic test data using the best models
 predictions_rf = best_rf.transform(predictions_df)
@@ -134,5 +134,5 @@ result_gbt = predictions_gbt.select(
 )
 
 # Save predictions to S3
-result_rf.write.parquet("s3a://eafit-project-3-bucket/models/results/predictions_rf/", mode="overwrite")
-result_gbt.write.parquet("s3a://eafit-project-3-bucket/models/results/predictions_gbt/", mode="overwrite")
+result_rf.write.parquet("s3a://eafit-project-3-bucket/refined/models/results/predictions_rf/", mode="overwrite")
+result_gbt.write.parquet("s3a://eafit-project-3-bucket/refined/models/results/predictions_gbt/", mode="overwrite")
