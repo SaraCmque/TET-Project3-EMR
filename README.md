@@ -80,5 +80,4 @@ This layer enables access to refined data through query interfaces and APIs.
 > For full details, review [Data Visualization Layer Explanation](http://github.com/SaraCmque/TET-Project3-EMR/wiki/Components-description#3-data-visualization-layer-explanation)
 
 ## Project Presentation
-For a comprehensive video explanation of the project, please visit [Project Video Explanation](https://www.canva.com/de)
-(https://www.canva.com/design/DAGpD6jp_dM/09ZwufV7FVTVMP1f-vJQYQ/watch?utm_content=DAGpD6jp_dM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hab2cc7f00d)
+For a comprehensive video explanation of the project, please visit [Project Video Explanation](https://www.canva.com/design/DAGpD6jp_dM/09ZwufV7FVTVMP1f-vJQYQ/watch?utm_content=DAGpD6jp_dM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hab2cc7f00d)
